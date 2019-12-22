@@ -3,7 +3,7 @@ VLC media player extension to get movie info using OMDB API.
 
 
 ## INSTALL
-to install paste the .lua file in  extensions folder
+To install paste the .lua file in  extensions folder
 
 Windows (all users): %ProgramFiles%\VideoLAN\VLC\lua\extensions\
 Linux (all users): /usr/lib/vlc/lua/extensions/
