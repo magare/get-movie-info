@@ -80,7 +80,8 @@ function managekey()
     local file
     inputs['path'] = vlc.config.configdir()
     if not vlc.io.open(inputs.path .. '/key.txt', 'r') then
-        file = vlc.io.open(inputs.path .. '/key.txt', 'wb') -- create empty file and close immideately
+        -- create empty file and close immideately
+        file = vlc.io.open(inputs.path .. '/key.txt', 'wb') 
         file:flush()        
     else
         file = vlc.io.open(inputs.path .. '/key.txt', 'rb')
@@ -220,7 +221,8 @@ function detect_year()
     return year
 end
 
-function meta_changed() -- System function
+-- System function
+function meta_changed() 
     inputs['movie_name'] = detect_movie_name()
     inputs['search'] = dlg:add_text_input(detect_movie_name(),2,1,2,1)     
     inputs['year_input'] = detect_year()
@@ -288,10 +290,12 @@ function clear_info()
     end
 end
 
-function deactivate() -- System Function
+-- System Function
+function deactivate() 
     vlc.deactivate()
 end
 
-function close() -- System function
+-- System function
+function close() 
     vlc.deactivate()
 end
