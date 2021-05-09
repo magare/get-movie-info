@@ -133,7 +133,7 @@ function get_info()
     info_message_text_isset = 1
     dlg:update()
 
-    local url = "http://www.omdbapi.com/?apikey="..apikey.."&t="..search_term:gsub("%s+", "+").."&y="..search_year
+    local url = "https://www.omdbapi.com/?apikey="..apikey.."&t="..search_term:gsub("%s+", "+").."&y="..search_year
     vlc.msg.dbg(url)
     local response = vlc.stream(url)
     if not response then
